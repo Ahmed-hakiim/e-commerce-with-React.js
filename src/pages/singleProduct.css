@@ -1,0 +1,251 @@
+.single-product-header {
+  margin: 40px 20px 30px;
+  color: darkblue;
+  text-shadow: 2px 2px 5px rgba(139, 139, 255, 0.83);
+  font-size: 30px;
+}
+
+.count {
+  margin: 40px 20px 30px;
+  color: darkblue;
+  text-shadow: 2px 2px 5px rgba(139, 139, 255, 0.83);
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-product-container {
+  margin-top: 40px;
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  .single-product-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+}
+
+.product-imgView-container {
+  flex: 1;
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  .product-imgView-container {
+    flex-direction: column;
+  }
+}
+
+.product-thumbnails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .product-thumbnails {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.product-thumbnails-img {
+  width: 60%;
+  height: 50px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .product-thumbnails-img {
+    flex: 1;
+    max-width: 70px;
+  }
+}
+
+.product-thumbnails-img.active-thumbnail {
+  box-shadow: 0px 0px 6px 5px rgba(26, 98, 131, 0.699);
+}
+
+.product-thumbnails-img:first-child {
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .product-thumbnails-img:first-child {
+    margin-top: 0;
+  }
+}
+
+.Product-active-imgContainer {
+  flex: 5;
+}
+
+.Product-active-img {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.541),
+    -1px -1px 7px 0 rgba(0, 0, 0, 0.311);
+}
+
+.product-details-container {
+  flex: 1;
+  padding: 0 20px;
+}
+
+@media (max-width: 700px) {
+  .product-details-container {
+    padding: 15px;
+    margin-top: 10px;
+  }
+}
+
+.product-details-desc {
+  font-size: 25px;
+  line-height: 1.2;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.product-details-title {
+  color: darkblue;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.product-details-rating {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.product-details-star-rating-outer {
+  position: relative;
+  display: inline-block;
+}
+
+.product-details-star-rating-outer::before {
+  content: "\2605 \2605 \2605 \2605 \2605";
+  font-size: 25px;
+  color: #ccc;
+}
+
+.product-details-star-rating-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  overflow: hidden;
+}
+
+.product-details-star-rating-inner::before {
+  content: "\2605 \2605 \2605 \2605 \2605";
+  font-size: 25px;
+  color: gold;
+}
+
+.product-details-discount-price {
+  margin: 10px 0 0 0;
+  color: green;
+}
+
+.product-details-discount {
+  margin-right: 10px;
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.product-details-price {
+  font-weight: 900;
+  font-size: bold;
+}
+
+.product-details-category {
+  margin-top: 20px;
+}
+
+.product-details-category span:first-child {
+  font-weight: 900;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-details-category span:last-child {
+  color: #555;
+}
+
+.product-details-brand {
+  margin: 10px 0;
+}
+
+.product-details-brand span:first-child {
+  font-weight: 900;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-details-brand span:last-child {
+  color: #555;
+}
+
+.product-details-stock span:first-child {
+  font-weight: 900;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-details-stock span:last-child {
+  color: #555;
+}
+
+/* edit-delete */
+.edit-delete-container-single {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.edit-delete-container-single>button {
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.edit-delete-container-single>button:first-child:hover {
+  box-shadow: 0 0 10px 0 red;
+  background-color: white;
+}
+
+.edit-delete-container-single>button:nth-child(2):hover {
+  box-shadow: 0 0 10px 0 rgb(18, 178, 116);
+  background-color: white;
+}
+
+.delete-icon-single {
+  color: red;
+}
+
+.edit-icon-single {
+  color: rgb(18, 178, 116);
+}
